@@ -1,0 +1,15 @@
+./IIIT5K
+./IIIT5K-Word_zip
+./IIIT5K-Word_V3.0.tar.gz
+./IIIT5K/test
+./IIIT5K/train
+./IIIT5K/lexicon.txt
+./IIIT5K/README.md
+./IIIT5K/testCharBound.m
+./IIIT5K/Train_labels.txt
+./IIIT5K/Test_labels.txt
+./IIIT5K/testdata
+./IIIT5K/traindata
+./IIIT5K/trainCharBound
+
+./Web/node_modules
