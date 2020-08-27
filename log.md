@@ -26,3 +26,11 @@ Information from Street View Imagery
 <li>Created a node based web-app which can able to take in any image provided by the user.Bootstrap has been used for front end application.</li>
 <li>Started writing documentation for each part in colab.</li>
 </ul>
+
+## Day - 5 ( 27-08-2020 )
+<ul>
+<li>Documentation for sub functions and readme has been added.</li>
+<li>sequence to sequence model has been updated.</li>
+<li>Preprocessed images from the pre-trained model has been saved for training seq2seq model.</li>
+<li>Written logic for accepting images from client to server.</li>
+</ul>
