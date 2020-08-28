@@ -25,6 +25,7 @@ Information from Street View Imagery
 <li>Selected few of the best layers which give a good performance by referring the suggested paper. The selected feature extractor layers are used for training the attention based model.</li>
 <li>Created a node based web-app which can able to take in any image provided by the user.Bootstrap has been used for front end application.</li>
 <li>Started writing documentation for each part in colab.</li>
+<li>attention based model, I have generated was not working properly. Need to fix bugs.</li>
 </ul>
 
 ## Day - 5 ( 27-08-2020 )
@@ -32,5 +33,14 @@ Information from Street View Imagery
 <li>Documentation for sub functions and readme has been added.</li>
 <li>sequence to sequence model has been updated.</li>
 <li>Preprocessed images from the pre-trained model has been saved for training seq2seq model.</li>
+<li>Written logic for accepting images from client to server.</li>
+<li>need to fix problems in attention models</li>
+</ul>
+
+## Day - 6 ( 28-08-2020 )
+<ul>
+<li>Web Application details have been included in the readme and started writing Report.</li>
+<li>Triying fixing bugs in sequence to sequence model.</li>
+<li>Downloaded the model and converted to tfjs model.</li>
 <li>Written logic for accepting images from client to server.</li>
 </ul>

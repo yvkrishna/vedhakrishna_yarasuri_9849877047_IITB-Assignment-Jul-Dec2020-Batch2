@@ -18,65 +18,39 @@ const upload = multer({storage:storage})
 app.use(express.static("templates"));
 app.set('view engine','ejs');
 app.set('views', __dirname + '/templates');
-async function loadModel(){
-    const MODEL_URL = 'file://model.json';
-    //const URL_PATH = path.resolve(__dirname,"model.json");
-    console.log(MODEL_URL)
-    const model = await tf.loadLayersModel(MODEL_URL);
-}
-//loadModel();
 
-app.get('/loadModel',function(req,res){
-    const URL_PATH = path.resolve(__dirname,"model.json");
+app.get('/loadFeatureExtractor',function(req,res){
+    const URL_PATH = path.resolve(__dirname,"models","web_feature_extractor","model.json");
+    res.sendFile(URL_PATH);
+})
+
+app.get('/loadSequenceModel',function(req,res){
+    const URL_PATH = path.resolve(__dirname,"models","seq2seq","seq2seq.json");
     res.sendFile(URL_PATH);
 })
 
 app.get('/',function(req,res){
     res.sendFile(path.resolve(__dirname,"/templates/register.html"));
 })
-
-app.post('/RecognizeOCR', upload.single('ocrImage'), function(req,res,next){
+app.get('/models/web_feature_extractor/model.json',function(req,res){
+    const URL_PATH = path.resolve(__dirname,"models","web_feature_extractor","model.json");
+    res.sendFile(URL_PATH);
+})
+app.get('/models/web_feature_extractor/:filename',function(req,res){
+    const URL_PATH = path.resolve(__dirname,"models","web_feature_extractor",req.params.filename);
+    res.sendFile(URL_PATH);
+})
+app.post('/RecognizeOCR', upload.single('ocrImage'), async function(req,res,next){
     console.log(req.file);
     res.send(req.file.path);
+    const model = await tf.loadLayersModel('http://localhost:8000/loadFeatureExtractor');
+    // tf.loadLayersModel('http://localhost:8000/loadFeatureExtractor')
+    // .then(model => {
+    //     console.log(model);
+    // })
+    console.log(model.summary())
 })
 
-
-app.get("/checkAnomly/:voltVal/:currentVal", async function(req,res){
-    
-    const model = await tf.loadLayersModel(tf.io.http(
-        'http://localhost:8000/loadModel', {requestInit: {method: 'GET'}}));
-    v = parseFloat(req.params.voltVal)
-    i = parseFloat(req.params.currentVal)
-    console.log(v,i)
-    console.log(model.summary());
-    const input = tf.tensor2d([220.0,15.0], [1,2]);
-    var result = model.predict(input);
-    res.send(input);
-    
-    
-    // const MODEL_URL = 'localstorage://model.json';
-	// // const URL_PATH = path.resolve(__dirname,"model.json");
-	// console.log(MODEL_URL);
-	// try{
-	// 	const model = await tf.loadLayersModel(MODEL_URL);
-	// 	const input = tf.tensor2d([req.params.voltVal,req.params.currentVal], [1,2]);
-	// 	var result = model.predict(input);
-	// 	if(result>0.5){
-	// 		// anomly detected
-	// 		// result = 1;
-	// 		// user should then send the location to route '/sendLoc'
-	// 		res.send("anomly detected");
-	// 	}else{
-	// 		// casual thing ( not an anomly )
-	// 		// result = 0;
-	// 		res.send("no anomly detected");
-	// 	}
-    // }catch(error){
-    //     console.log(error)
-	// 	console.log('problem in loading the model');
-	// 	res.send("could not able to access the model.")
-    // }
-})
 
 app.set('port',process.env.PORT||8000)
 

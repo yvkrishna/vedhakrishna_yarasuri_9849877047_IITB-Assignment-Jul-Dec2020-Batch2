@@ -1,4 +1,5 @@
 # Vedha Krishna Yarasuri
+--- 
 <p align="center">
     <img src="https://store-images.s-microsoft.com/image/apps.4294.13510798886736958.a650f2a3-9e4d-4aeb-8aff-d1ce5d232c80.cf7f9fcd-4d78-4d3f-8a03-98ed771f89c1" alt="OCR" width="200"  height="165">
 </p>
@@ -8,6 +9,7 @@
 ## Table Of Contents
 - [Dependencies](#dependencies)
 - [What's included](#whats-included)
+- [Image Dataset](#image-data)
 - [Architecture](#architecture)
 
 ## Dependencies
@@ -33,13 +35,12 @@ vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/
 |    |   ├─img1rot15.jpg
 |    |   ├─img1rot-15.jpg
 |    |   ├─img1blur.jpg
-|    |   ├─img1rot15blur.jpg
-|    |   ├─img1rot-15blur.jpg
 |    |     .
 |    |     .
 |    |     .
 |    ├──test/
 |    |    ├─test_img1.png
+|    |    ├─test_img2.png
 |    |      .
 |    |      .
 |    |          
@@ -52,6 +53,21 @@ vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/
 |   ├──Templates/
 |   |     └──index.html
 |   |
+|   ├──modals/
+|   |     ├──web_feature_extractor/
+|   |     |        ├──model.json
+|   |     |        ├──group1-shard1of30.bin
+|   |     |        ├── .
+|   |     |        ├── .
+|   |     |         
+|   |     └──seq2seq/ 
+|   |              ├──model.json
+|   |              ├──group1-shard1of30.bin
+|   |              ├── .
+|   |              ├── .
+|   |
+|   |
+|   ├──uploads/
 |   └──index.js
 |   
 |
@@ -59,7 +75,23 @@ vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/
 
 ```
 <p>IIIT5K is the dataset folder. This dataset was found from <a href="https://cvit.iiit.ac.in/research/projects/cvit-projects/the-iiit-5k-word-dataset">click here</a>
-You can find a tar file named `IIIT 5K-word` which when extracted you will get a folder named `IIIT5K`. Due to its size, I cannot upoad it to the git hub. Initially there will be normal images, but due to data augumentation you will find images with name `img1rot15`, `img1rot-15`, `img1blur`, `img1rot15blur`, `img1rot-15blur` .
+You can find a tar file named IIIT 5K-word which when extracted you will get a folder named IIIT5K. Due to its size, I cannot upoad it to the git hub. Initially there will be normal images, but due to data augumentation you will find images with name img1rot15, img1rot-15, img1blur</p>
+
+<p>Uploads contains the files uploaded by the user using web-app. The image is then taken from this folder for predictions.</p> 
+<p>The models folder contains json models generated using tensorflow converter.</p>
+
+## Image Dataset
+These are a few instances taken from IIIT5K dataset.
+<p>
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
+    <img src="">
 </p>
 
 ## Architecture
@@ -70,8 +102,20 @@ You can find a tar file named `IIIT 5K-word` which when extracted you will get a
 Given an image as an input
 <ol>
     <li>The image is resized to (299,299,3) and converted to numpy.ndarray</li>
-    <li>The image is fed to the Inception-Resnet-v2 model and features are extracted at the layer`mixed_7a`.</li>
+    <li>The image is fed to the Inception-Resnet-v2 model and features are extracted at the layer mixed_7a.</li>
     <li>The output features are of size=(m, 8, 8, 2080) then unrolled to size=(m, 64, 2080).</li>
     <li>The un-rolled features are then given to a sequence to sequence attention model to get the oututs.</li>
     <li>The outputs are then decoded to corresponding word.</li>
 </ol>
+<h3 align="center">The Web-App</h3>
+<p>
+    <img src="./Web/templates/home_1.png">
+    <img src="./Web/templates/home_1.png">
+</p>
+
+<h3>The Process</h3>
+<p>The process remain same. But the image is uploaded by the user through web application and the image is sent to the server using rest api with multer as middleware.</p>
+<p>The uploaded image is stored in uploads folder.</p>
+
+<h4>API Signature</h4>
+<p>Rest Api has been created using express server. It has 3 GET request routes. One is for the client side application. The second one is used for getting the feature generator model. The third one is used for sequence to sequence model which gives output as a label.</p>

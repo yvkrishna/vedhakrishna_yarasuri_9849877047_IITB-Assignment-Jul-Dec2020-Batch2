@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -23,14 +23,15 @@
 <body>
 
     <div class="alert alert-success" role="alert">
+      <div class="container">
         <h4 class="alert-heading">Hey, There &#128075;</h4>
-        <p>I </p>
         <hr>
-        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        <p class="mb-0">You need to upload a picture of sample form.</p>
       </div>
+    </div>
       <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
+            <h1 class="display-4">Upload a textual image and get its textual readings in it.</h1>
             <div class="row">
                 <div class="col-md-10 col-sm-6 col-12" id="img-block">
                     <img id="myimage" class="img-thumbnail myimg">
@@ -66,7 +67,7 @@
                 imgtag.src = event.target.result;
             };
              reader.readAsDataURL(selectedFile);
-        }
+        }        
       </script>
 
 
