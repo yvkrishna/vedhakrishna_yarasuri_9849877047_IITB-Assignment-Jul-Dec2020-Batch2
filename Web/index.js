@@ -30,16 +30,10 @@ app.get('/loadSequenceModel',function(req,res){
 })
 
 app.get('/',function(req,res){
-    res.sendFile(path.resolve(__dirname,"/templates/register.html"));
+    res.sendFile(path.resolve(__dirname,"/templates/index.html"));
+    console.log("hi");
 })
-app.get('/models/web_feature_extractor/model.json',function(req,res){
-    const URL_PATH = path.resolve(__dirname,"models","web_feature_extractor","model.json");
-    res.sendFile(URL_PATH);
-})
-app.get('/models/web_feature_extractor/:filename',function(req,res){
-    const URL_PATH = path.resolve(__dirname,"models","web_feature_extractor",req.params.filename);
-    res.sendFile(URL_PATH);
-})
+
 app.post('/RecognizeOCR', upload.single('ocrImage'), async function(req,res,next){
     console.log(req.file);
     res.send(req.file.path);
@@ -52,7 +46,7 @@ app.post('/RecognizeOCR', upload.single('ocrImage'), async function(req,res,next
 })
 
 
-app.set('port',process.env.PORT||8000)
+app.set('port',process.env.PORT||6000)
 
 var server = app.listen(app.get('port'),function(){
 console.log("server started at port "+app.get('port').toString())

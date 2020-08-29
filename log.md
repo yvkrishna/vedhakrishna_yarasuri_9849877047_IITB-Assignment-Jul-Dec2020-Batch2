@@ -44,3 +44,10 @@ Information from Street View Imagery
 <li>Downloaded the model and converted to tfjs model.</li>
 <li>Written logic for accepting images from client to server.</li>
 </ul>
+
+## Day - 7 ( 29-08-2020 )
+<ul>
+<li>Stored the features from the feature extractor as a seperate dataset.</li>
+<li>Triying fixing final bugs in the complete code base.</li>
+<li>Triying fixing bugs in sequence to sequence model.</li>
+</ul>
