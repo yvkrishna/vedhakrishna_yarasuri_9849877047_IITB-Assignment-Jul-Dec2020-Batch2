@@ -14,14 +14,21 @@
 
 ## Dependencies
 <p>This current repo requires 
+    - Python Dependencies
     <ul>
-    <li>tensorflow(=2.3.0)</li>
-    <li>tensorflow.js(=2.3.0)</li>
-    <li>matplotlib(=1.18.5)</li>
-    <li>numpy(=1.18.5)</li>
-    <li>PIL(=7.0.0)</li>
-    <li>Node(=10.15.3)</li>
-    <li>npm(=6.4.1)</li>
+        <li>tensorflow(=2.3.0)</li>
+        <li>tensorflow.js(=2.3.0)</li>
+        <li>matplotlib(=1.18.5)</li>
+        <li>numpy(=1.18.5)</li>
+        <li>PIL(=7.0.0)</li>
+    </ul>
+    - Web App Dependencies
+    <ul>
+        <li>Node(=10.15.3)</li>
+        <li>npm(=6.4.1)</li>
+        <li>express(=4.17.1)</li>
+        <li>@tensorflow/tfjs(=6.4.1)</li>
+        <li>multer(=1.4.2)</li>
     </ul>
 </p>
 
@@ -109,8 +116,9 @@ Given an image as an input
 </ol>
 <h3 align="center">The Web-App</h3>
 <p>
-    <img src="./Web/templates/home_1.png">
-    <img src="./Web/templates/home_1.png">
+    ![home_1.png](./Web/templates/home_1.png)
+    <!-- <img src="./Web/templates/home_1.png">
+    <img src="./Web/templates/home_1.png"> -->
 </p>
 
 <h3>The Process</h3>

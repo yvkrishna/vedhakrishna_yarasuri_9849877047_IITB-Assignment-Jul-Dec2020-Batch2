@@ -51,3 +51,9 @@ Information from Street View Imagery
 <li>Triying fixing final bugs in the complete code base.</li>
 <li>Triying fixing bugs in sequence to sequence model.</li>
 </ul>
+
+## Day - 7 ( 29-08-2020 )
+<ul>
+<li>Fixed bugs in sequence to sequence model.</li>
+<li>Started writing Report.</li>
+</ul>
