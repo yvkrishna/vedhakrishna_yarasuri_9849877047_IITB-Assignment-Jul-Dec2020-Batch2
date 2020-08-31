@@ -9,20 +9,26 @@
 ## Table Of Contents
 - [Dependencies](#dependencies)
 - [What's included](#whats-included)
-- [Image Dataset](#image-data)
+- [Image Dataset](#image-dataset)
 - [Architecture](#architecture)
+- [References](#references)
+- [The Web-App](#The-Web-App)
 
 ## Dependencies
-<p>This current repo requires 
+<p>This current repo requires</p> 
     - Python Dependencies
+<p>
     <ul>
+        <li>python(=3.6.9)
         <li>tensorflow(=2.3.0)</li>
         <li>tensorflow.js(=2.3.0)</li>
         <li>matplotlib(=1.18.5)</li>
         <li>numpy(=1.18.5)</li>
         <li>PIL(=7.0.0)</li>
     </ul>
+</p>
     - Web App Dependencies
+<p>
     <ul>
         <li>Node(=10.15.3)</li>
         <li>npm(=6.4.1)</li>
@@ -30,7 +36,8 @@
         <li>@tensorflow/tfjs(=6.4.1)</li>
         <li>multer(=1.4.2)</li>
     </ul>
-</p>
+</p>    
+
 
 ## What's included
 Within the download you'll find the following directories and files. You'll see something like this:
@@ -109,15 +116,22 @@ These are a few instances taken from IIIT5K dataset.
 Given an image as an input
 <ol>
     <li>The image is resized to (299,299,3) and converted to numpy.ndarray</li>
-    <li>The image is fed to the Inception-Resnet-v2 model and features are extracted at the layer mixed_7a.</li>
+    <li>The image is fed to the Inception-Resnet-v2 model and features are extracted at the layer block8_1_conv.</li>
     <li>The output features are of size=(m, 8, 8, 2080) then unrolled to size=(m, 64, 2080).</li>
     <li>The un-rolled features are then given to a sequence to sequence attention model to get the oututs.</li>
     <li>The outputs are then decoded to corresponding word.</li>
 </ol>
-<h3 align="center">The Web-App</h3>
+
+## The Web-App
+<p>Web Application has been designed using :
+	1 . Node.js	
+    2 . Bootstrap
+</p>
 <p>
     <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/web1.png">
+    <p>Fig 1: The home page.</p>
     <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/web2.png">
+    <p>Fig 1: The upload Image.</p>
 </p>
 
 <h3>The Process</h3>
@@ -126,3 +140,22 @@ Given an image as an input
 
 <h4>API Signature</h4>
 <p>Rest Api has been created using express server. It has 3 GET request routes. One is for the client side application. The second one is used for getting the feature generator model. The third one is used for sequence to sequence model which gives output as a label.</p>
+
+<h3>Instructions For setting up Web App</h3>
+<ol>
+    <li>Have the needed node version.(Note : If you don't have node installed in your system then please install it.)</li>
+    <li>Install the necessary packages mentioned in the instructions.txt .</li>
+    <li>Go to the web directory.</li>
+    <li>Run This Command.  node index.js</li>
+</ol>
+
+
+## References
+<p>@INPROCEEDINGS{8270074,  author={Z. {Wojna} and A. N. {Gorban} and D. {Lee} and K. {Murphy} and Q. {Yu} and Y. {Li} and J. {Ibarz}},  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},   title={Attention-Based Extraction of Structured Information from Street View Imagery},   year={2017},  volume={01},  number={},  pages={844-850},}</p>
+
+<p>@InProceedings{MishraBMVC12,
+  author    = "Mishra, A. and Alahari, K. and Jawahar, C.~V.",
+  title     = "Scene Text Recognition using Higher Order Language Priors",
+  booktitle = "BMVC",
+  year      = "2012",
+}</p>

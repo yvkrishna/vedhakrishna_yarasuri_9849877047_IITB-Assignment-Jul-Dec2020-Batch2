@@ -1,0 +1,9 @@
+pip install tensorflow==2.3.0
+pip install tensorflow.js
+pip install matplotlib
+pip install numpy
+pip install PIL
+
+npm install express
+npm install @tensorflow/tfjs
+npm install multer
