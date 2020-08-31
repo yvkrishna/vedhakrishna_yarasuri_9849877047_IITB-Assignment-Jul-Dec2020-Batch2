@@ -46,7 +46,7 @@ app.post('/RecognizeOCR', upload.single('ocrImage'), async function(req,res,next
 })
 
 
-app.set('port',process.env.PORT||6000)
+app.set('port',process.env.PORT||8000)
 
 var server = app.listen(app.get('port'),function(){
 console.log("server started at port "+app.get('port').toString())
