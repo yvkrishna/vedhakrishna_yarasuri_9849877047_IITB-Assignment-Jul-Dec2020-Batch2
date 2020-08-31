@@ -52,8 +52,16 @@ Information from Street View Imagery
 <li>Triying fixing bugs in sequence to sequence model.</li>
 </ul>
 
-## Day - 7 ( 29-08-2020 )
+## Day - 8 ( 30-08-2020 )
 <ul>
 <li>Fixed bugs in sequence to sequence model.</li>
 <li>Started writing Report.</li>
+</ul>
+
+## Day - 9 ( 31-08-2020 )
+<ul>
+<li>Fixed bugs in sequence to sequence model.</li>
+<li>Completed writing Report.</li>
+<li>Completed Preparing Presentation.</li>
+<li>Completed adding all the needed things to the repository.</li>
 </ul>
