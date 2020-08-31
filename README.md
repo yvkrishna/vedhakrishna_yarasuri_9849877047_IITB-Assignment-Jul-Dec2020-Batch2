@@ -90,15 +90,15 @@ You can find a tar file named IIIT 5K-word which when extracted you will get a f
 ## Image Dataset
 These are a few instances taken from IIIT5K dataset.
 <p>
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image1.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image2.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image3.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image4.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image5.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image6.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image7.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image8.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/image9.png">
 </p>
 
 ## Architecture
@@ -116,9 +116,8 @@ Given an image as an input
 </ol>
 <h3 align="center">The Web-App</h3>
 <p>
-    ![home_1.png](./Web/templates/home_1.png)
-    <!-- <img src="./Web/templates/home_1.png">
-    <img src="./Web/templates/home_1.png"> -->
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/web1.png">
+    <img src="https://github.com/yvkrishna/vedhakrishna_yarasuri_9849877047_IITB-Assignment-Jul-Dec2020-Batch2/blob/master/Images/web2.png">
 </p>
 
 <h3>The Process</h3>
